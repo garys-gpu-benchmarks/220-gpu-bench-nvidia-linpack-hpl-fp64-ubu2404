@@ -92,13 +92,13 @@ Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC B
 - Validates FP64 Linpack GFLOPS, time-to-solution, and a passing residual check
 - #1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops); is present and physically sensible.
 - #2: Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s); is present and physically sensible.
-- #3: Mean percent of FP64 vector peak (percent_of_fp64_vector_peak) is present and physically sensible.
+- #3: Mean percent of FP64 tensor-core peak (percent_of_fp64_tensor_peak) is present and physically sensible.
 
 ## 3. Metrics Captured
 
 - **#1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS** — stored as `sustained_fp64_performance_across_problem_size_n_tflops`.
 - **#2: Mean cuSOLVER dense-LU time, s** — stored as `time_to_solution_across_problem_size_n_s`.
-- **#3: Mean percent of FP64 vector peak** — stored as `percent_of_fp64_vector_peak`.
+- **#3: Mean percent of FP64 tensor-core peak** — stored as `percent_of_fp64_tensor_peak`.
 
 ## 4. Hardware Requirements
 
@@ -160,7 +160,7 @@ source ".venv/bin/activate"
 
 Local bin/nvhpl stdout plus a normalized CSV row. This is not mpirun, HPL.dat, or an HPC container log
 
-sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_vector_peak,time_to_solution_across_problem_size_n_s,error_message
+sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_tensor_peak,time_to_solution_across_problem_size_n_s,error_message
 0,ok,cusolver,65536,32768,6,8.0,20,12,
 
 ```bash
@@ -175,7 +175,7 @@ Consolidated metrics from the most recent run — suitable for CI artifact uploa
 
 Local bin/nvhpl stdout plus a normalized CSV row. This is not mpirun, HPL.dat, or an HPC container log
 
-sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_vector_peak,time_to_solution_across_problem_size_n_s,error_message
+sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_tensor_peak,time_to_solution_across_problem_size_n_s,error_message
 0,ok,cusolver,65536,32768,6,8.0,20,12,
 
 ## 9. Baselines / Thresholds
@@ -188,7 +188,7 @@ Expected ranges and gates live in `config/benchmark_config.yaml` under `baseline
 Create cannot finish without `scripts/collect_workload.py`.
 
 **`self_check` overlay rewritten**
-Do not overwrite files listed in `results/overlay_lock.json`.
+`Locked overlay rewritten` means the sibling file and the `sha256` in `results/overlay_lock.json` disagree. The repair is to make `implementation_components/<component-id>/files/<path>`, the sibling path, and that digest the same bytes, then recheck with `create_one_workload.py --validate-only`. Do not replace the overlay with a new collector, and do not regenerate a non-empty sibling.
 
 **Remote SSH drop during setup**
 Reconnect and resume `bash setup.sh --assume-yes`. Do not wipe `.venv` or `.cache`.

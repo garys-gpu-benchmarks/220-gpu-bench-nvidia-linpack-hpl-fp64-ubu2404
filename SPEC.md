@@ -28,14 +28,14 @@ Build nvhpl via scripts/build.sh; run bin/nvhpl for warmup plus timed repeats
 
 Local bin/nvhpl stdout plus a normalized CSV row. This is not mpirun, HPL.dat, or an HPC container log
 
-sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_vector_peak,time_to_solution_across_problem_size_n_s,error_message
+sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_tensor_peak,time_to_solution_across_problem_size_n_s,error_message
 0,ok,cusolver,65536,32768,6,8.0,20,12,
 
 ## Metrics
 
 - **#1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS** — stored as `sustained_fp64_performance_across_problem_size_n_tflops`.
 - **#2: Mean cuSOLVER dense-LU time, s** — stored as `time_to_solution_across_problem_size_n_s`.
-- **#3: Mean percent of FP64 vector peak** — stored as `percent_of_fp64_vector_peak`.
+- **#3: Mean percent of FP64 tensor-core peak** — stored as `percent_of_fp64_tensor_peak`.
 
 ## Framework
 
@@ -82,7 +82,7 @@ BENCHMARK_DB=tests/fixtures/benchmark.db \
 
 Local bin/nvhpl stdout plus a normalized CSV row. This is not mpirun, HPL.dat, or an HPC container log
 
-sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_vector_peak,time_to_solution_across_problem_size_n_s,error_message
+sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_tensor_peak,time_to_solution_across_problem_size_n_s,error_message
 0,ok,cusolver,65536,32768,6,8.0,20,12,
 
 ```bash

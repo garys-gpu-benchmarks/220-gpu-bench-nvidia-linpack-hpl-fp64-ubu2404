@@ -37,7 +37,7 @@
   {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "#1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops); #2: Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s); #3: Mean percent of FP64 vector peak (percent_of_fp64_vector_peak)"
+    "value": "#1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops); #2: Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s); #3: Mean percent of FP64 tensor-core peak (percent_of_fp64_tensor_peak)"
   },
   {
     "field_name": "Command Tools Executed",
@@ -97,7 +97,7 @@
   {
     "field_name": "Raw Output Example",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_vector_peak,time_to_solution_across_problem_size_n_s,error_message\n0,ok,cusolver,65536,32768,6,8.0,20,12,"
+    "value": "sample_index,status,solver_implementation,requested_problem_size_n,actual_problem_size_n,timed_repeats,sustained_fp64_performance_across_problem_size_n_tflops,percent_of_fp64_tensor_peak,time_to_solution_across_problem_size_n_s,error_message\n0,ok,cusolver,65536,32768,6,8.0,20,12,"
   },
   {
     "field_name": "run_benchmark Command Plus Options for Smoke Run",
@@ -117,7 +117,7 @@
   {
     "field_name": "Output Fields / Metrics to Parse",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "sustained_fp64_performance_across_problem_size_n_tflops, percent_of_fp64_vector_peak, time_to_solution_across_problem_size_n_s, solver_implementation, requested_problem_size_n, actual_problem_size_n, timed_repeats"
+    "value": "sustained_fp64_performance_across_problem_size_n_tflops, percent_of_fp64_tensor_peak, time_to_solution_across_problem_size_n_s, solver_implementation, requested_problem_size_n, actual_problem_size_n, timed_repeats"
   },
   {
     "field_name": "Success Criteria",
@@ -127,7 +127,7 @@
   {
     "field_name": "Parser and Normalization Notes",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "TFLOPS is GFLOPS/1000. percent_of_fp64_vector_peak uses peak_fp64_vector_tflops, or BENCHMARK_PEAK_FP64_VECTOR_TFLOPS, and is blank when no peak is known. N at least 65536 is clamped to 32768. The CSV has one row per timed repeat, each carrying requested N, actual N, and timed_repeats"
+    "value": "TFLOPS is GFLOPS/1000. percent_of_fp64_tensor_peak uses peak_fp64_vector_tflops, or BENCHMARK_PEAK_FP64_VECTOR_TFLOPS, and is blank when no peak is known. N at least 65536 is clamped to 32768. The CSV has one row per timed repeat, each carrying requested N, actual N, and timed_repeats"
   },
   {
     "field_name": "Hardware Config",
