@@ -15,7 +15,7 @@ sweep:
   problem_size_N:
     smoke: 4096
     baseline: 32768
-    extended: 65536
+    extended: 32768
   block_size:
     smoke: 256
     baseline: 384
