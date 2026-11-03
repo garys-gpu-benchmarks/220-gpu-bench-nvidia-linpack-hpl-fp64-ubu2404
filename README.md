@@ -85,7 +85,7 @@ Three operator scripts from [`garys-gpu-benchmarks/gpu-bench-suite`](https://git
 
 ## 1. Overview
 
-Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC Benchmarks container. num_gpus=1 and process_grid P×Q=1×. precision is FP64. problem_size_N is clamped from >=65536 down to 32768. Sweep dimensions: num_gpus, process_grid_P, process_grid_Q, precision, problem_size_N, block_size, panel_factorization, warmup_iters.
+Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC Benchmarks container. num_gpus=1 and process_grid P×Q=1×. precision is FP64. problem_size_N is clamped from >=65536 down to 32768. Sweep dimensions: num_gpus, process_grid_P, process_grid_Q, problem_size_N, block_size, panel_factorization, warmup_iters, num_iterations.
 
 ## 2. What It Validates
 
