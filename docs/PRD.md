@@ -21,7 +21,7 @@ Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed r
 Measure sustained FP64 Linpack performance
 
 ## Validation Objective
-Validates FP64 Linpack GFLOPS, time-to-solution, and a passing residual check
+Validates cuSOLVER LU Linpack TFLOPS, time-to-solution, and Residual Check: PASSED
 
 ## Workload Category
 Compute & Math Kernels

@@ -15,7 +15,7 @@ Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC B
 ## Invocation
 
 ```bash
-Build nvhpl via scripts/build.sh; run bin/nvhpl for warmup plus timed repeats
+Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl --N
 ```
 
 ## Raw Output Format
@@ -42,7 +42,7 @@ Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed r
 ## Platform Portability
 
 - **AMD (primary):** ```bash
-Build nvhpl via scripts/build.sh; run bin/nvhpl for warmup plus timed repeats
+Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl --N
 ```
 - **NVIDIA:** Native NVIDIA CUDA workload. Execute on the stated Ubuntu release with the host NVIDIA driver and CUDA userspace. ROCm porting notes do not apply.
 
