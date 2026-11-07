@@ -16,12 +16,11 @@ capture_benchmark_run_command_submitted "$@"
 
 usage() {
   cat <<'USAGE'
+
 Usage: bash run_benchmark.sh [OPTIONS]
 
 Workload Name:          NVIDIA HPL FP64 (High Performance Linpack).
 Main Goal:              Measure sustained FP64 Linpack performance.
-Validation Objective:   Validates cuSOLVER LU Linpack TFLOPS, time-to-solution, and Residual Check:
-                        PASSED.
 Command Tools Executed: Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl
                         --N.
 
