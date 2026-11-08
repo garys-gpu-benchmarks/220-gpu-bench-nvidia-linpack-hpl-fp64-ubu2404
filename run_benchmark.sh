@@ -19,10 +19,10 @@ usage() {
 
 Usage: bash run_benchmark.sh [OPTIONS]
 
-Workload Name:          NVIDIA HPL FP64 (High Performance Linpack).
-Main Goal:              Measure sustained FP64 Linpack performance.
+Workload Name:          NVIDIA HPL FP64 (High Performance Linpack)
+Main Goal:              Measure sustained FP64 Linpack performance
 Command Tools Executed: Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl
-                        --N.
+                        --N
 
 Profiles (default: --smoke):
   --smoke                       Run smoke profile
