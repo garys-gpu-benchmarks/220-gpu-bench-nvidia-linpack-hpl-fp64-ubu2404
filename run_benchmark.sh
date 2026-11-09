@@ -18,8 +18,9 @@ usage() {
   cat <<'USAGE'
 Usage: bash run_benchmark.sh [OPTIONS]
 
-Workload Name:          NVIDIA HPL FP64 (High Performance Linpack)
-Main Goal:              Measure sustained FP64 Linpack performance
+Workload Name:          cuSOLVER FP64 Dense LU Solve (single GPU)
+Main Goal:              Measure sustained FP64 dense LU solve (getrf + getrs) throughput with
+                        cuSOLVER on one GPU
 Command Tools Executed: Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl
                         --N
 

@@ -37,7 +37,7 @@ Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC B
 
 ## Installation and Execution Summary
 
-Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 Linpack. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container
+Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 dense LU. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container
 
 ## Platform Portability
 

@@ -7,7 +7,7 @@
   {
     "field_name": "Workload Name",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "NVIDIA HPL FP64 (High Performance Linpack)"
+    "value": "cuSOLVER FP64 Dense LU Solve (single GPU)"
   },
   {
     "field_name": "GPU Vendor",
@@ -32,7 +32,7 @@
   {
     "field_name": "Main Goal",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Measure sustained FP64 Linpack performance"
+    "value": "Measure sustained FP64 dense LU solve (getrf + getrs) throughput with cuSOLVER on one GPU"
   },
   {
     "field_name": "Command Tools Executed",
@@ -162,12 +162,12 @@
   {
     "field_name": "Validation Objective",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Validates cuSOLVER LU Linpack TFLOPS, time-to-solution, and Residual Check: PASSED"
+    "value": "Validates cuSOLVER dense LU TFLOPS, time-to-solution, and Residual Check: PASSED"
   },
   {
     "field_name": "Command Execution Details and Purpose",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 Linpack. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
+    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 dense LU. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
   },
   {
     "field_name": "Command Methodology",
@@ -372,7 +372,7 @@
   {
     "field_name": "Installation and Execution Summary",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 Linpack. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
+    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 dense LU. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
   },
   {
     "field_name": "Workload Command Line Executable",
@@ -392,7 +392,7 @@
   {
     "field_name": "Execution Summary (Run and Measure)",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 Linpack. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
+    "value": "Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 dense LU. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container"
   },
   {
     "field_name": "nVidia Porting Instructions (Reference Only)",

@@ -12,16 +12,16 @@ This PRD.md section is populated from benchmark_specification.json, which is the
 220
 
 ## Workload Name
-NVIDIA HPL FP64 (High Performance Linpack)
+cuSOLVER FP64 Dense LU Solve (single GPU)
 
 ## Execution Summary (Run and Measure)
-Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 Linpack. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container
+Build and run bin/nvhpl (cuSOLVER FP64 dense solve) for yaml warmup plus timed repeats, parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails, to measure sustained FP64 dense LU. N at or above 65536 is clamped to 32768. Not mpirun, HPL.dat, or an NVIDIA HPC container
 
 ## Main Goal
-Measure sustained FP64 Linpack performance
+Measure sustained FP64 dense LU solve (getrf + getrs) throughput with cuSOLVER on one GPU
 
 ## Validation Objective
-Validates cuSOLVER LU Linpack TFLOPS, time-to-solution, and Residual Check: PASSED
+Validates cuSOLVER dense LU TFLOPS, time-to-solution, and Residual Check: PASSED
 
 ## Workload Category
 Compute & Math Kernels

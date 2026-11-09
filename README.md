@@ -1,9 +1,9 @@
-# NVIDIA HPL FP64 (High Performance Linpack) Benchmark
+# cuSOLVER FP64 Dense LU Solve (single GPU) Benchmark
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![CI](https://github.com/garys-gpu-benchmarks/220-gpu-bench-nvidia-linpack-hpl-fp64-ubu2404/actions/workflows/ci.yml/badge.svg)](https://github.com/garys-gpu-benchmarks/220-gpu-bench-nvidia-linpack-hpl-fp64-ubu2404/actions/workflows/ci.yml)
 
-Measures sustained FP64 Linpack performance. Workload 220 of the NVIDIA Ubuntu 24.04 bundle.
+Measures sustained FP64 dense LU solve (getrf + getrs) throughput with cuSOLVER on one GPU. Workload 220 of the NVIDIA Ubuntu 24.04 bundle.
 
 ## Quick Start
 
