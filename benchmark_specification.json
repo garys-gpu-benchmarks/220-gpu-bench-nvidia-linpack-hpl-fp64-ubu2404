@@ -40,6 +40,11 @@
     "value": "Build src/nvhpl.cu (cuSOLVER LU) with scripts/build.sh, then run bin/nvhpl --N"
   },
   {
+    "field_name": "Execution Description With Parameters",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC Benchmarks container. It runs on one GPU; cuSOLVER picks its own block size and factorization, so there is no num_gpus, process grid, block_size or panel_factorization parameter. precision is FP64. problem_size_N is clamped from >=65536 down to 32768. warmup_iters and num_iterations come from yaml; the collector also caps timed repeats. Residual Check: FAILED aborts the sample"
+  },
+  {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "#1: Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops); #2: Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s); #3: Mean percent of FP64 tensor-core peak (percent_of_fp64_tensor_peak)"
@@ -173,11 +178,6 @@
     "field_name": "Command Methodology",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Build and run bin/nvhpl, a cuSOLVER FP64 dense solve, for yaml warmup plus timed repeats. Parse GFLOPS, time-to-solution, and Residual Check, and abort if that check fails. N at or above 65536 is clamped to 32768. This does not use mpirun, HPL.dat, or an NVIDIA HPC container"
-  },
-  {
-    "field_name": "Execution Description With Parameters",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Builds and runs local bin/nvhpl (cuSOLVER FP64 dense solve), not an NVIDIA HPC Benchmarks container. It runs on one GPU; cuSOLVER picks its own block size and factorization, so there is no num_gpus, process grid, block_size or panel_factorization parameter. precision is FP64. problem_size_N is clamped from >=65536 down to 32768. warmup_iters and num_iterations come from yaml; the collector also caps timed repeats. Residual Check: FAILED aborts the sample"
   },
   {
     "field_name": "Execution Domain",
