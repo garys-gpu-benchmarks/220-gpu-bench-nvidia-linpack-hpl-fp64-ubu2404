@@ -11,14 +11,14 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× NVIDIA H100 80GB HBM3 (81559 MiB) · Intel(R) Xeon(R) Platinum 8470 · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 595.112.07
-- **Run:** 2026-11-22T11:07:02Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 00:55 · benchmark 00:04 · whole run 01:05
-- **Source:** run 220_20261122_110702
+- **Run:** 2026-11-22T14:36:46Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 00:35 · benchmark 00:04 · whole run 00:45
+- **Source:** run 220_20261122_143646
 - **Command:** `bash run_benchmark.sh --smoke --problem-size-N 4096 --warmup-iters 0 --num-iterations 1`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops) | 0.710105 |
-| 2 | Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s) | 0.0645 |
-| 3 | Mean percent of FP64 tensor-core peak (percent_of_fp64_tensor_peak) | 1.0613123653005165 |
+| 1 | Mean cuSOLVER FP64 dense-LU throughput, TFLOPS (sustained_fp64_performance_across_problem_size_n_tflops) | 0.706405 |
+| 2 | Mean cuSOLVER dense-LU time, s (time_to_solution_across_problem_size_n_s) | 0.06485 |
+| 3 | Mean percent of FP64 tensor-core peak (percent_of_fp64_tensor_peak) | 1.055782400363483 |
 <!-- /profile:smoke -->
